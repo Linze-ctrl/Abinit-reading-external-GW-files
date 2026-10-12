@@ -1,0 +1,84 @@
+##############################################
+####                SECTION: basic
+##############################################
+ ecut 22
+ nband 8
+ ngkpt 10 10 10
+ kptopt 1
+ nshiftk 1
+ shiftk  0 0 0
+ istwfk *1
+##############################################
+####                 SECTION: bse
+##############################################
+ bs_loband 2
+ bs_freq_mesh    0.0    0.2204959331   7.3498644351d-04
+ bs_calctype 2
+ bs_exchange_term 1
+ bs_coulomb_term 11
+ bs_coupling 0
+ bs_algorithm 2
+ bs_haydock_niter 100
+ bs_haydock_tol    0.05 0
+##############################################
+####                 SECTION: dev
+##############################################
+ iomode 3
+##############################################
+####                SECTION: files
+##############################################
+ getgw_filepath "lalala_GW"
+ getscr_filepath "indata/in_SCR.nc"
+ indata_prefix "indata/in"
+ tmpdata_prefix "tmpdata/tmp"
+ outdata_prefix "outdata/out"
+ pseudos "/home/llz/abinit_pseudos/nc-sr-05_pbe_standard_psp8/Si.psp8"
+##############################################
+####               SECTION: gstate
+##############################################
+ optdriver 99
+ #chksymbreak 0
+##############################################
+####                 SECTION: gw
+##############################################
+ #mbpt_sciss 0.025724525522965495
+ zcut 0.0036749322175665
+ ecuteps 10
+ ecutwfn 22
+ inclvkb 2
+ gw_icutcoul 3
+##############################################
+####                  STRUCTURE
+##############################################
+ natom 2
+ ntypat 1
+ typat 1 1
+ znucl 14
+ xred
+    0.0000000000    0.0000000000    0.0000000000
+    0.2500000000    0.2500000000    0.2500000000
+ acell    1.0    1.0    1.0
+ rprim
+    6.3287685694    0.0000000000    3.6539162371
+    2.1095895231    5.9668202293    3.6539162371
+    0.0000000000    0.0000000000    7.3078324743
+
+
+#<JSON>
+#{
+#    "pseudos": [
+#        {
+#            "@module": "pymatgen.io.abinit.pseudos",
+#            "@class": "NcAbinitPseudo",
+#            "basename": "Si.psp8",
+#            "type": "NcAbinitPseudo",
+#            "symbol": "Si",
+#            "Z": 14,
+#            "Z_val": 4.0,
+#            "l_max": 2,
+#            "md5": "45c393525680abc7b25445b8ec62bf83",
+#            "filepath": "/home/llz/abinit_pseudos/nc-sr-05_pbe_standard_psp8/Si.psp8"
+#        }
+#    ]
+#}
+#</JSON>
